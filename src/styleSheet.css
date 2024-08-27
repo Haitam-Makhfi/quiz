@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: #021e4e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.container {
+  background-color: #fff;
+  width: 38rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.container h2 {
+  width: 100%;
+  color: #021e4e;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px #021e4e;
+}
+.container .question {
+  color: #021e4e;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  width: 100%;
+}
+.container .answer {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: start;
+  border: solid 1px #021e4e;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.container .answer:last-of-type {
+  margin-bottom: 0;
+}
+.container .answer:hover:not([disabled]) {
+  background-color: #021e4e;
+  color: #fff;
+}
+.container .answer:disabled {
+  cursor: not-allowed;
+  color: #222;
+}
+.next,
+.PlayAgain {
+  width: auto;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+  background-color: #021e4e;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.PlayAgain {
+  text-decoration: none;
+}
+/* js added classes */
+.rightAnswer {
+  background-color: lightgreen;
+}
+.wrongAnswer {
+  background-color: lightcoral;
+}
